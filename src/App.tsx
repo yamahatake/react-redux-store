@@ -11,7 +11,7 @@ function App() {
       <header>
         <Navigation/>
       </header>
-      <main>
+      <main className='flex justify-center'>
         <Outlet />
       </main>
       <footer></footer>

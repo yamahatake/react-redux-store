@@ -1,5 +1,5 @@
-export const Page404 = () => (
+export const Support = () => (
   <section className="max-w-screen-xl w-full mt-8">
-    <h1>Page404</h1>
+    <h1>Support</h1>
   </section>
 )
