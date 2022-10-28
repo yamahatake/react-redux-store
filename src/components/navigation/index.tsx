@@ -6,7 +6,7 @@ export type NavigationProps = {
 }
 
 export const Navigation: FC<NavigationProps> = () => (
-  <div className='bg-cyan-500 shadow-md flex justify-center items-center h-16'>
+  <header className='bg-cyan-500 shadow-md flex justify-center items-center h-16 pr-3 pl-3'>
     <nav className='max-w-screen-xl w-full flex justify-between'>
       <ul className='flex text-white gap-5 text-2xl'>
         <li><Link to="/">Home</Link></li>
@@ -15,5 +15,5 @@ export const Navigation: FC<NavigationProps> = () => (
         <li><Link to="/support">Support</Link></li>
       </ul>
     </nav>
-  </div>
+  </header>
 )
