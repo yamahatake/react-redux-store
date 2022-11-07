@@ -3,7 +3,7 @@ import { ProductItem } from 'components/productItem'
 import { ProductType } from 'types/products'
 
 export type ProductGridProps = {
-  productsList: ProductType[]
+  productList?: ProductType[]
 }
 
 const listProducts = (products: ProductType[] = []) => {
@@ -11,6 +11,7 @@ const listProducts = (products: ProductType[] = []) => {
   return products.map((product: ProductType) => {
     return (
       <ProductItem 
+        key={product?.id}
         id={product?.id}
         title={product?.title}
         description={product?.description}
@@ -23,10 +24,10 @@ const listProducts = (products: ProductType[] = []) => {
 }
 
 export const ProductGrid: FC<ProductGridProps> = (props) => {
-  const { productsList } = props
+  const { productList } = props
   return (
     <section className='grid-cols-4'>
-      {listProducts(productsList)}
+      {listProducts(productList)}
     </section>
   )
 }

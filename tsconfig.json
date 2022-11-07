@@ -1,19 +1,17 @@
 {
   "compilerOptions": {
-    "target": "esnext",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2019",
-      "esnext"
-    ],
+    "target": "es5",
+    "lib": ["es6", "dom"],
     "allowJs": true,
+    "sourceMap": true,
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": true,
-    "strictNullChecks": false,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
     "noImplicitAny": true,
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "commonjs",
@@ -28,5 +26,17 @@
     "baseUrl": "src",
     "types": ["node", "jest", "@testing-library/jest-dom"],
   },
-  "include": [ "src" ]
+  "include": [ "src" ],
+  "exclude": [
+    "node_modules",
+    "build",
+    "scripts",
+    "acceptance-tests",
+    "webpack",
+    "jest",
+    "src/setupTests.ts"
+  ],
+  "types": [
+    "typePatches"
+  ]
 }
